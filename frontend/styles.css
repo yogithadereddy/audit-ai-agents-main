@@ -1,0 +1,117 @@
+/* styles.css */
+
+/* ========= TOP BORDER ========= */
+
+/* Fixed top blue border across all pages */
+.stApp::before {
+    content: "";
+    display: block;
+    height: 10px;
+    background-color: #00338D; /* Solid blue to match sidebar */
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+}
+
+/* Push content down to avoid overlap with top border */
+.stApp {
+    margin-top: 10px;
+}
+
+/* ========= SIDEBAR STYLES ========= */
+
+/* Sidebar background and default text color */
+section[data-testid="stSidebar"] {
+    background-color: #00338D !important;
+    color: white !important;
+}
+
+/* Force white color for all sidebar elements */
+section[data-testid="stSidebar"] * {
+    color: white !important;
+}
+
+/* Sidebar headings and nav links - bold and white */
+section[data-testid="stSidebar"] .css-1d391kg, 
+section[data-testid="stSidebar"] .css-1v3fvcr, 
+section[data-testid="stSidebar"] .css-qrbaxs {
+    color: white !important;
+    font-weight: bold;
+}
+
+/* Capitalize sidebar menu items */
+section[data-testid="stSidebar"] ul li {
+    text-transform: capitalize !important;
+}
+
+/* Remove grey highlight on selected sidebar items */
+section[data-testid="stSidebar"] .css-1v3fvcr {
+    background-color: transparent !important;
+}
+
+/* Sidebar hover effect for nav items */
+section[data-testid="stSidebar"] ul li:hover {
+    background-color: #001f5c !important;  /* Slightly darker shade for hover */
+    color: white !important;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+
+/* ========= COMPONENT STYLES ========= */
+
+/* Buttons */
+div.stButton > button {
+    background-color: #00338D !important;
+    color: white !important;
+    border-radius: 5px;
+    border: none;
+}
+
+div.stButton > button:hover {
+    background-color: #001f5c !important;
+}
+
+/* Inputs, selects, textareas */
+input, select, textarea {
+    border: 1px solid #00338D !important;
+}
+
+/* Multiselect pills (remove red tags and make blue) */
+span.css-1n76uvr, span[data-baseweb="tag"] {
+    background-color: #00338D !important;
+    color: white !important;
+    border-radius: 4px !important;
+}
+
+/* Optional: change 'x' icon color in multiselect tags */
+span[data-baseweb="tag"] svg {
+    color: white !important;
+}
+
+/* ========= FONT TWEAKS ========= */
+
+/* Slightly smaller than h2 subheader for evidence sections */
+.evidence-section-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+/* List items font */
+.evidence-list-item {
+    font-size: 15px;
+}
+
+/* ========= LOGOUT BUTTON POSITION ========= */
+
+/* Float logout button to top-right */
+button[title="Click to log out"] {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    z-index: 10000;
+}

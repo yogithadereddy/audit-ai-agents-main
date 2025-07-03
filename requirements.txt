@@ -1,0 +1,13 @@
+flask
+flask-cors
+sendgrid
+pandas
+plotly
+APScheduler
+pymongo 
+python-dotenv
+werkzeug
+ollama
+APScheduler
+flask-APScheduler
+streamlit
